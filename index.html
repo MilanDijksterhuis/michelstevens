@@ -1,27 +1,38 @@
 <!DOCTYPE html>
 <html lang="nl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Michel Stevens Stuc &amp; Design</title>
-  <meta name="description" content="Stukadoorsbedrijf Michel Stevens. Stucwerk, designafwerking en badkamerstuc. 5,0 op Google. Bel 06 48360737.">
+  <meta name="description"
+    content="Stukadoorsbedrijf Michel Stevens. Stucwerk, designafwerking en badkamerstuc. 5,0 op Google. Bel 06 48360737.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
   <style>
-
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      --ink:   #080808;
-      --lift:  #0E0E0E;
-      --gold:  #C2A046;
-      --cream: #EDE7DA;
-      --stone: #6E6860;
-      --line:  rgba(255,255,255,0.06);
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
-    html { scroll-behavior: smooth; }
+    :root {
+      --ink: #080808;
+      --lift: #0E0E0E;
+      --gold: #C2A046;
+      --cream: #EDE7DA;
+      --stone: #6E6860;
+      --line: rgba(255, 255, 255, 0.06);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
 
     body {
       background: var(--ink);
@@ -33,34 +44,79 @@
     }
 
     @keyframes appear {
-      from { opacity:0; transform:translateY(22px); }
-      to   { opacity:1; transform:translateY(0); }
+      from {
+        opacity: 0;
+        transform: translateY(22px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    .h-a1 { animation: appear .9s cubic-bezier(.16,1,.3,1) .3s  both; }
-    .h-a2 { animation: appear .9s cubic-bezier(.16,1,.3,1) .55s both; }
-    .h-a3 { animation: appear .9s cubic-bezier(.16,1,.3,1) .75s both; }
+
+    .h-a1 {
+      animation: appear .9s cubic-bezier(.16, 1, .3, 1) .3s both;
+    }
+
+    .h-a2 {
+      animation: appear .9s cubic-bezier(.16, 1, .3, 1) .55s both;
+    }
+
+    .h-a3 {
+      animation: appear .9s cubic-bezier(.16, 1, .3, 1) .75s both;
+    }
 
     .sr {
       opacity: 0;
       transform: translateY(20px);
-      transition: opacity .8s cubic-bezier(.16,1,.3,1),
-                  transform .8s cubic-bezier(.16,1,.3,1);
+      transition: opacity .8s cubic-bezier(.16, 1, .3, 1),
+        transform .8s cubic-bezier(.16, 1, .3, 1);
     }
-    .sr.in { opacity:1; transform:translateY(0); }
-    .sr.d1 { transition-delay:.10s; }
-    .sr.d2 { transition-delay:.22s; }
-    .sr.d3 { transition-delay:.34s; }
+
+    .sr.in {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .sr.d1 {
+      transition-delay: .10s;
+    }
+
+    .sr.d2 {
+      transition-delay: .22s;
+    }
+
+    .sr.d3 {
+      transition-delay: .34s;
+    }
 
     @media (prefers-reduced-motion: reduce) {
-      .sr, .h-a1, .h-a2, .h-a3 { opacity:1; transform:none; animation:none; transition:none; }
+
+      .sr,
+      .h-a1,
+      .h-a2,
+      .h-a3 {
+        opacity: 1;
+        transform: none;
+        animation: none;
+        transition: none;
+      }
     }
 
     /* ═══════════════════════════════════════════
        NAV — groter, logo links
     ═══════════════════════════════════════════ */
     @keyframes navDrop {
-      from { transform:translateY(-100%); opacity:0; }
-      to   { transform:translateY(0); opacity:1; }
+      from {
+        transform: translateY(-100%);
+        opacity: 0;
+      }
+
+      to {
+        transform: translateY(0);
+        opacity: 1;
+      }
     }
 
     #nav {
@@ -73,15 +129,16 @@
       align-items: center;
       justify-content: space-between;
       padding: 0 48px;
-      background: rgba(8,8,8,0.46);
+      background: rgba(8, 8, 8, 0.46);
       backdrop-filter: blur(32px) saturate(180%);
       -webkit-backdrop-filter: blur(32px) saturate(180%);
       border-bottom: 1px solid var(--line);
-      animation: navDrop .7s cubic-bezier(.16,1,.3,1) .1s both;
+      animation: navDrop .7s cubic-bezier(.16, 1, .3, 1) .1s both;
       transition: background .4s ease;
     }
+
     #nav.heavy {
-      background: rgba(8,8,8,0.82);
+      background: rgba(8, 8, 8, 0.82);
     }
 
     .nav-logo {
@@ -91,6 +148,7 @@
       text-decoration: none;
       flex-shrink: 0;
     }
+
     .nav-logo-img {
       width: 56px;
       height: 56px;
@@ -98,11 +156,13 @@
       mix-blend-mode: screen;
       display: block;
     }
+
     .nav-title {
       display: flex;
       flex-direction: column;
       gap: 1px;
     }
+
     .nav-title-main {
       font-size: 14px;
       font-weight: 500;
@@ -111,6 +171,7 @@
       text-transform: uppercase;
       line-height: 1;
     }
+
     .nav-title-sub {
       font-size: 10px;
       font-weight: 300;
@@ -125,6 +186,7 @@
       gap: 44px;
       list-style: none;
     }
+
     .nav-links a {
       font-size: 12px;
       font-weight: 400;
@@ -134,7 +196,10 @@
       text-decoration: none;
       transition: color .25s ease;
     }
-    .nav-links a:hover { color: var(--cream); }
+
+    .nav-links a:hover {
+      color: var(--cream);
+    }
 
     .nav-phone {
       font-size: 13px;
@@ -142,16 +207,17 @@
       color: var(--gold);
       letter-spacing: .08em;
       text-decoration: none;
-      border: 1px solid rgba(194,160,70,.38);
+      border: 1px solid rgba(194, 160, 70, .38);
       padding: 9px 22px;
       border-radius: 3px;
       white-space: nowrap;
       background: linear-gradient(to right, var(--gold) 50%, transparent 50%);
       background-size: 200% 100%;
       background-position: right;
-      transition: background-position .45s cubic-bezier(.16,1,.3,1),
-                  color .3s ease, border-color .3s ease;
+      transition: background-position .45s cubic-bezier(.16, 1, .3, 1),
+        color .3s ease, border-color .3s ease;
     }
+
     .nav-phone:hover {
       background-position: left;
       color: var(--ink);
@@ -167,6 +233,7 @@
       cursor: pointer;
       padding: 4px;
     }
+
     .nav-burger span {
       display: block;
       width: 24px;
@@ -181,13 +248,17 @@
       position: fixed;
       inset: 0;
       z-index: 199;
-      background: rgba(8,8,8,.97);
+      background: rgba(8, 8, 8, .97);
       flex-direction: column;
       align-items: center;
       justify-content: center;
       gap: 32px;
     }
-    .mob-menu.open { display: flex; }
+
+    .mob-menu.open {
+      display: flex;
+    }
+
     .mob-menu a {
       font-family: 'Outfit', sans-serif;
       font-size: 38px;
@@ -197,7 +268,11 @@
       letter-spacing: .04em;
       transition: color .25s;
     }
-    .mob-menu a:hover { color: var(--gold); }
+
+    .mob-menu a:hover {
+      color: var(--gold);
+    }
+
     .mob-menu .mob-tel {
       font-family: 'Outfit', sans-serif;
       font-size: 18px;
@@ -206,6 +281,7 @@
       letter-spacing: .12em;
       margin-top: 8px;
     }
+
     .mob-close {
       position: absolute;
       top: 22px;
@@ -234,7 +310,10 @@
       border: none;
       transition: transform .2s ease, box-shadow .3s ease;
     }
-    .btn:active { transform: scale(.97); }
+
+    .btn:active {
+      transform: scale(.97);
+    }
 
     .btn-gold {
       background: linear-gradient(to right, #D4B257 50%, var(--gold) 50%);
@@ -242,12 +321,13 @@
       background-position: right;
       color: var(--ink);
       padding: 16px 44px;
-      transition: background-position .45s cubic-bezier(.16,1,.3,1),
-                  transform .2s ease, box-shadow .3s ease;
+      transition: background-position .45s cubic-bezier(.16, 1, .3, 1),
+        transform .2s ease, box-shadow .3s ease;
     }
+
     .btn-gold:hover {
       background-position: left;
-      box-shadow: 0 6px 28px rgba(194,160,70,.22);
+      box-shadow: 0 6px 28px rgba(194, 160, 70, .22);
       transform: translateY(-2px);
     }
 
@@ -257,11 +337,12 @@
       background-position: right;
       color: var(--gold);
       padding: 14px 34px;
-      border: 1px solid rgba(194,160,70,.38);
+      border: 1px solid rgba(194, 160, 70, .38);
       border-radius: 2px;
-      transition: background-position .45s cubic-bezier(.16,1,.3,1),
-                  color .35s ease, border-color .3s ease, transform .2s ease;
+      transition: background-position .45s cubic-bezier(.16, 1, .3, 1),
+        color .35s ease, border-color .3s ease, transform .2s ease;
     }
+
     .btn-ghost:hover {
       background-position: left;
       color: var(--ink);
@@ -284,6 +365,7 @@
       inset: 0;
       z-index: 0;
     }
+
     .hero-bg img {
       width: 100%;
       height: 100%;
@@ -291,17 +373,16 @@
       object-position: center center;
       display: block;
     }
+
     .hero-bg::after {
       content: '';
       position: absolute;
       inset: 0;
-      background: linear-gradient(
-        to right,
-        rgba(8,8,8,0.18) 0%,
-        rgba(8,8,8,0.45) 38%,
-        rgba(8,8,8,0.82) 62%,
-        rgba(8,8,8,0.90) 100%
-      );
+      background: linear-gradient(to right,
+          rgba(8, 8, 8, 0.18) 0%,
+          rgba(8, 8, 8, 0.45) 38%,
+          rgba(8, 8, 8, 0.82) 62%,
+          rgba(8, 8, 8, 0.90) 100%);
     }
 
     .hero-content {
@@ -329,6 +410,7 @@
       letter-spacing: -.02em;
       margin-bottom: 28px;
     }
+
     .hero-h1 em {
       font-style: normal;
       color: var(--gold);
@@ -338,7 +420,7 @@
     .hero-p {
       font-size: 15px;
       font-weight: 300;
-      color: rgba(237,231,218,0.72);
+      color: rgba(237, 231, 218, 0.72);
       line-height: 1.8;
       margin-bottom: 52px;
       max-width: 400px;
@@ -393,18 +475,19 @@
       overflow: hidden;
       aspect-ratio: 3/4;
       cursor: pointer;
-      transition: transform .55s cubic-bezier(.16,1,.3,1),
-                  box-shadow .55s ease,
-                  z-index 0s .55s;
+      transition: transform .55s cubic-bezier(.16, 1, .3, 1),
+        box-shadow .55s ease,
+        z-index 0s .55s;
       z-index: 1;
     }
+
     .port-item:hover {
       transform: scale(1.06);
-      box-shadow: 0 24px 64px rgba(0,0,0,0.7);
+      box-shadow: 0 24px 64px rgba(0, 0, 0, 0.7);
       z-index: 10;
-      transition: transform .55s cubic-bezier(.16,1,.3,1),
-                  box-shadow .55s ease,
-                  z-index 0s 0s;
+      transition: transform .55s cubic-bezier(.16, 1, .3, 1),
+        box-shadow .55s ease,
+        z-index 0s 0s;
     }
 
     .port-item img {
@@ -412,8 +495,9 @@
       height: 100%;
       object-fit: cover;
       display: block;
-      transition: transform .6s cubic-bezier(.16,1,.3,1);
+      transition: transform .6s cubic-bezier(.16, 1, .3, 1);
     }
+
     .port-item:hover img {
       transform: scale(1.04);
     }
@@ -446,12 +530,15 @@
       align-items: flex-start;
       gap: 0;
       padding: 48px 0;
-      border-top: 1px solid rgba(255,255,255,0.07);
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
       position: relative;
       cursor: default;
       overflow: hidden;
     }
-    .dienst-item:last-child { border-bottom: 1px solid rgba(255,255,255,0.07); }
+
+    .dienst-item:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
 
     /* goud accent balk links */
     .dienst-item::before {
@@ -464,16 +551,22 @@
       background: var(--gold);
       transform: scaleY(0);
       transform-origin: bottom;
-      transition: transform .45s cubic-bezier(.16,1,.3,1);
+      transition: transform .45s cubic-bezier(.16, 1, .3, 1);
     }
-    .dienst-item:hover::before { transform: scaleY(1); }
+
+    .dienst-item:hover::before {
+      transform: scaleY(1);
+    }
 
     .dienst-main {
       flex: 0 0 52%;
       padding-left: 0;
-      transition: padding-left .45s cubic-bezier(.16,1,.3,1);
+      transition: padding-left .45s cubic-bezier(.16, 1, .3, 1);
     }
-    .dienst-item:hover .dienst-main { padding-left: 20px; }
+
+    .dienst-item:hover .dienst-main {
+      padding-left: 20px;
+    }
 
     .dienst-name {
       font-family: 'Outfit', sans-serif;
@@ -484,7 +577,10 @@
       letter-spacing: -.02em;
       transition: color .3s ease;
     }
-    .dienst-item:hover .dienst-name { color: var(--gold); }
+
+    .dienst-item:hover .dienst-name {
+      color: var(--gold);
+    }
 
     .dienst-sub {
       font-size: 13px;
@@ -528,8 +624,16 @@
       line-height: 1.48;
       margin-bottom: 30px;
     }
-    .quote-text::before { content: '\201C'; color: var(--gold); }
-    .quote-text::after  { content: '\201D'; color: var(--gold); }
+
+    .quote-text::before {
+      content: '\201C';
+      color: var(--gold);
+    }
+
+    .quote-text::after {
+      content: '\201D';
+      color: var(--gold);
+    }
 
     .quote-stars {
       font-size: 14px;
@@ -537,6 +641,7 @@
       letter-spacing: 3px;
       margin-bottom: 10px;
     }
+
     .quote-from {
       font-size: 11px;
       font-weight: 400;
@@ -552,7 +657,10 @@
       padding: 96px 56px;
     }
 
-    .b-inner { max-width: 1280px; margin: 0 auto; }
+    .b-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
 
     .b-score {
       display: flex;
@@ -561,6 +669,7 @@
       margin-bottom: 60px;
       flex-wrap: wrap;
     }
+
     .b-num {
       font-family: 'Outfit', sans-serif;
       font-size: 64px;
@@ -568,10 +677,30 @@
       color: var(--gold);
       line-height: 1;
     }
-    .b-meta { display: flex; flex-direction: column; gap: 4px; }
-    .b-stars { font-size: 15px; color: var(--gold); letter-spacing: 2px; }
-    .b-count { font-size: 12px; color: var(--stone); }
-    .b-divider { width: 1px; height: 48px; background: rgba(255,255,255,.08); }
+
+    .b-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .b-stars {
+      font-size: 15px;
+      color: var(--gold);
+      letter-spacing: 2px;
+    }
+
+    .b-count {
+      font-size: 12px;
+      color: var(--stone);
+    }
+
+    .b-divider {
+      width: 1px;
+      height: 48px;
+      background: rgba(255, 255, 255, .08);
+    }
+
     .b-label {
       font-family: 'Outfit', sans-serif;
       font-size: 26px;
@@ -584,14 +713,19 @@
       grid-template-columns: repeat(3, 1fr);
       gap: 0;
     }
+
     .b-item {
       padding: 0 44px;
-      border-left: 1px solid rgba(255,255,255,0.07);
+      border-left: 1px solid rgba(255, 255, 255, 0.07);
       display: flex;
       flex-direction: column;
       gap: 14px;
     }
-    .b-item:first-child { padding-left: 0; border-left: none; }
+
+    .b-item:first-child {
+      padding-left: 0;
+      border-left: none;
+    }
 
     .b-q-text {
       font-family: 'Outfit', sans-serif;
@@ -602,6 +736,7 @@
       line-height: 1.75;
       flex: 1;
     }
+
     .b-author {
       font-size: 11px;
       font-weight: 400;
@@ -609,7 +744,7 @@
       letter-spacing: .14em;
       text-transform: uppercase;
       padding-top: 14px;
-      border-top: 1px solid rgba(255,255,255,0.07);
+      border-top: 1px solid rgba(255, 255, 255, 0.07);
     }
 
     /* ═══════════════════════════════════════════
@@ -619,6 +754,7 @@
       padding: 100px 56px;
       background: var(--lift);
     }
+
     .michel-inner {
       max-width: 1280px;
       margin: 0 auto;
@@ -627,7 +763,11 @@
       gap: 88px;
       align-items: start;
     }
-    .michel-photo { position: relative; }
+
+    .michel-photo {
+      position: relative;
+    }
+
     .michel-photo img {
       width: 100%;
       height: auto;
@@ -637,6 +777,7 @@
       object-fit: cover;
       object-position: top center;
     }
+
     .michel-photo::after {
       content: '';
       position: absolute;
@@ -644,10 +785,16 @@
       right: -12px;
       width: 64%;
       height: 64%;
-      border: 1px solid rgba(194,160,70,.18);
+      border: 1px solid rgba(194, 160, 70, .18);
       pointer-events: none;
     }
-    .michel-content { display: flex; flex-direction: column; gap: 20px; }
+
+    .michel-content {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+    }
+
     .michel-h {
       font-family: 'Outfit', sans-serif;
       font-size: clamp(32px, 3.4vw, 52px);
@@ -655,6 +802,7 @@
       line-height: 1.1;
       color: var(--cream);
     }
+
     .michel-p {
       font-size: 14.5px;
       font-weight: 300;
@@ -662,13 +810,20 @@
       line-height: 1.92;
       max-width: 520px;
     }
+
     .michel-stats {
       display: flex;
       gap: 40px;
       margin-top: 12px;
       flex-wrap: wrap;
     }
-    .michel-stat { display: flex; flex-direction: column; gap: 3px; }
+
+    .michel-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 3px;
+    }
+
     .michel-stat-n {
       font-family: 'Outfit', sans-serif;
       font-size: 46px;
@@ -676,6 +831,7 @@
       color: var(--gold);
       line-height: 1;
     }
+
     .michel-stat-l {
       font-size: 11px;
       font-weight: 300;
@@ -688,8 +844,9 @@
     ═══════════════════════════════════════════ */
     #bel {
       padding: 110px 56px;
-      border-top: 1px solid rgba(255,255,255,0.06);
+      border-top: 1px solid rgba(255, 255, 255, 0.06);
     }
+
     .bel-inner {
       max-width: 1280px;
       margin: 0 auto;
@@ -698,7 +855,13 @@
       gap: 80px;
       align-items: center;
     }
-    .bel-l { display: flex; flex-direction: column; gap: 22px; }
+
+    .bel-l {
+      display: flex;
+      flex-direction: column;
+      gap: 22px;
+    }
+
     .bel-h {
       font-family: 'Outfit', sans-serif;
       font-size: clamp(36px, 4.2vw, 62px);
@@ -706,7 +869,12 @@
       line-height: 1.06;
       color: var(--cream);
     }
-    .bel-h span { color: var(--gold); font-style: italic; }
+
+    .bel-h span {
+      color: var(--gold);
+      font-style: italic;
+    }
+
     .bel-p {
       font-size: 14.5px;
       font-weight: 300;
@@ -714,13 +882,15 @@
       line-height: 1.85;
       max-width: 380px;
     }
+
     .bel-r {
       display: flex;
       flex-direction: column;
       gap: 24px;
       padding-left: 48px;
-      border-left: 1px solid rgba(255,255,255,0.07);
+      border-left: 1px solid rgba(255, 255, 255, 0.07);
     }
+
     .bel-sublabel {
       font-size: 10px;
       letter-spacing: .26em;
@@ -740,27 +910,72 @@
       letter-spacing: .04em;
       transition: color .28s ease;
     }
-    .bel-phone:hover { color: #D4B45A; }
+
+    .bel-phone:hover {
+      color: #D4B45A;
+    }
+
     .pc {
       display: inline-block;
       opacity: 0;
       transform: translateY(12px);
       transition: opacity .32s ease, transform .32s ease;
     }
-    .bel-phone.lit .pc { opacity:1; transform:translateY(0); }
-    .bel-phone.lit .pc:nth-child(1)  { transition-delay:.00s; }
-    .bel-phone.lit .pc:nth-child(2)  { transition-delay:.04s; }
-    .bel-phone.lit .pc:nth-child(3)  { transition-delay:.08s; }
-    .bel-phone.lit .pc:nth-child(4)  { transition-delay:.12s; }
-    .bel-phone.lit .pc:nth-child(5)  { transition-delay:.16s; }
-    .bel-phone.lit .pc:nth-child(6)  { transition-delay:.20s; }
-    .bel-phone.lit .pc:nth-child(7)  { transition-delay:.24s; }
-    .bel-phone.lit .pc:nth-child(8)  { transition-delay:.28s; }
-    .bel-phone.lit .pc:nth-child(9)  { transition-delay:.32s; }
-    .bel-phone.lit .pc:nth-child(10) { transition-delay:.36s; }
-    .bel-phone.lit .pc:nth-child(11) { transition-delay:.40s; }
 
-    .bel-btns { display: flex; gap: 12px; flex-wrap: wrap; }
+    .bel-phone.lit .pc {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .bel-phone.lit .pc:nth-child(1) {
+      transition-delay: .00s;
+    }
+
+    .bel-phone.lit .pc:nth-child(2) {
+      transition-delay: .04s;
+    }
+
+    .bel-phone.lit .pc:nth-child(3) {
+      transition-delay: .08s;
+    }
+
+    .bel-phone.lit .pc:nth-child(4) {
+      transition-delay: .12s;
+    }
+
+    .bel-phone.lit .pc:nth-child(5) {
+      transition-delay: .16s;
+    }
+
+    .bel-phone.lit .pc:nth-child(6) {
+      transition-delay: .20s;
+    }
+
+    .bel-phone.lit .pc:nth-child(7) {
+      transition-delay: .24s;
+    }
+
+    .bel-phone.lit .pc:nth-child(8) {
+      transition-delay: .28s;
+    }
+
+    .bel-phone.lit .pc:nth-child(9) {
+      transition-delay: .32s;
+    }
+
+    .bel-phone.lit .pc:nth-child(10) {
+      transition-delay: .36s;
+    }
+
+    .bel-phone.lit .pc:nth-child(11) {
+      transition-delay: .40s;
+    }
+
+    .bel-btns {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
 
     /* ═══════════════════════════════════════════
        FOOTER
@@ -771,10 +986,11 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
-      border-top: 1px solid rgba(255,255,255,0.05);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
       flex-wrap: wrap;
       gap: 8px;
     }
+
     .ft-brand {
       font-family: 'Outfit', sans-serif;
       font-size: 13px;
@@ -782,383 +998,460 @@
       color: var(--stone);
       letter-spacing: .1em;
     }
+
     .ft-copy {
       font-size: 11px;
       font-weight: 300;
-      color: rgba(110,104,96,.45);
+      color: rgba(110, 104, 96, .45);
     }
 
     /* ═══════════════════════════════════════════
        RESPONSIVE
     ═══════════════════════════════════════════ */
     @media (max-width: 1024px) {
-      #nav { padding: 0 24px; height: 72px; }
-      .nav-links, .nav-phone { display: none; }
-      .nav-burger { display: flex; }
-      .nav-logo-img { width: 46px; height: 46px; }
+      #nav {
+        padding: 0 24px;
+        height: 72px;
+      }
 
-      .hero-content { padding: 100px 28px 72px; justify-content: flex-start; }
-      .hero-text { max-width: 100%; }
+      .nav-links,
+      .nav-phone {
+        display: none;
+      }
 
-      #portfolio { padding: 72px 28px; }
-      .port-top { flex-direction: column; align-items: flex-start; }
-      .port-grid { grid-template-columns: 1fr; gap: 14px; }
+      .nav-burger {
+        display: flex;
+      }
 
-      #diensten { padding: 72px 28px; }
-      .dienst-item { flex-direction: column; gap: 16px; }
-      .dienst-main { flex: none; width: 100%; }
-      .dienst-item:hover .dienst-main { padding-left: 0; }
-      .dienst-desc { padding-left: 0; }
+      .nav-logo-img {
+        width: 46px;
+        height: 46px;
+      }
 
-      #quote { padding: 72px 28px; }
+      .hero-content {
+        padding: 100px 28px 72px;
+        justify-content: flex-start;
+      }
 
-      #beoordelingen { padding: 72px 28px; }
-      .b-grid { grid-template-columns: 1fr; gap: 36px; }
-      .b-item { padding: 0; border-left: none; }
+      .hero-text {
+        max-width: 100%;
+      }
 
-      #michel { padding: 72px 28px; }
-      .michel-inner { grid-template-columns: 1fr; gap: 44px; }
-      .michel-photo img { max-height: 320px; }
-      .michel-photo::after { display: none; }
+      #portfolio {
+        padding: 72px 28px;
+      }
 
-      #bel { padding: 72px 28px; }
-      .bel-inner { grid-template-columns: 1fr; gap: 48px; }
-      .bel-r { padding-left: 0; border-left: none; border-top: 1px solid rgba(255,255,255,.07); padding-top: 40px; }
+      .port-top {
+        flex-direction: column;
+        align-items: flex-start;
+      }
 
-      footer { padding: 24px 20px; justify-content: center; text-align: center; }
+      .port-grid {
+        grid-template-columns: 1fr;
+        gap: 14px;
+      }
+
+      #diensten {
+        padding: 72px 28px;
+      }
+
+      .dienst-item {
+        flex-direction: column;
+        gap: 16px;
+      }
+
+      .dienst-main {
+        flex: none;
+        width: 100%;
+      }
+
+      .dienst-item:hover .dienst-main {
+        padding-left: 0;
+      }
+
+      .dienst-desc {
+        padding-left: 0;
+      }
+
+      #quote {
+        padding: 72px 28px;
+      }
+
+      #beoordelingen {
+        padding: 72px 28px;
+      }
+
+      .b-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+      }
+
+      .b-item {
+        padding: 0;
+        border-left: none;
+      }
+
+      #michel {
+        padding: 72px 28px;
+      }
+
+      .michel-inner {
+        grid-template-columns: 1fr;
+        gap: 44px;
+      }
+
+      .michel-photo img {
+        max-height: 320px;
+      }
+
+      .michel-photo::after {
+        display: none;
+      }
+
+      #bel {
+        padding: 72px 28px;
+      }
+
+      .bel-inner {
+        grid-template-columns: 1fr;
+        gap: 48px;
+      }
+
+      .bel-r {
+        padding-left: 0;
+        border-left: none;
+        border-top: 1px solid rgba(255, 255, 255, .07);
+        padding-top: 40px;
+      }
+
+      footer {
+        padding: 24px 20px;
+        justify-content: center;
+        text-align: center;
+      }
     }
 
     @media (max-width: 640px) {
-      .hero-h1 { font-size: 44px; }
-      .port-grid { gap: 10px; }
-      .michel-stats { gap: 24px; }
-      .bel-btns { flex-direction: column; }
-    }
+      .hero-h1 {
+        font-size: 44px;
+      }
 
+      .port-grid {
+        gap: 10px;
+      }
+
+      .michel-stats {
+        gap: 24px;
+      }
+
+      .bel-btns {
+        flex-direction: column;
+      }
+    }
   </style>
 </head>
+
 <body>
 
-<!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      NAV
 ═══════════════════════════════════════════ -->
-<nav id="nav" aria-label="Hoofdnavigatie">
-  <a href="#" class="nav-logo" aria-label="Michel Stevens Stuc &amp; Design">
-    <img
-      src="fotos/logo en vibe 1.jpg"
-      alt="Michel Stevens Stuc &amp; Design logo"
-      class="nav-logo-img"
-    >
-    <div class="nav-title">
-      <span class="nav-title-main">Michel Stevens</span>
-      <span class="nav-title-sub">Stuc &amp; Design</span>
-    </div>
-  </a>
+  <nav id="nav" aria-label="Hoofdnavigatie">
+    <a href="#" class="nav-logo" aria-label="Michel Stevens Stuc &amp; Design">
+      <img src="fotos/logo en vibe 1.jpg" alt="Michel Stevens Stuc &amp; Design logo" class="nav-logo-img">
+      <div class="nav-title">
+        <span class="nav-title-main">Michel Stevens</span>
+        <span class="nav-title-sub">Stuc &amp; Design</span>
+      </div>
+    </a>
 
-  <ul class="nav-links">
-    <li><a href="#diensten">Diensten</a></li>
-    <li><a href="#portfolio">Portfolio</a></li>
-    <li><a href="#michel">Wie is Michel</a></li>
-    <li><a href="#bel">Bel mij</a></li>
-  </ul>
+    <ul class="nav-links">
+      <li><a href="#diensten">Diensten</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#michel">Wie is Michel</a></li>
+      <li><a href="#bel">Bel mij</a></li>
+    </ul>
 
-  <a href="tel:0648360737" class="nav-phone">06 48360737</a>
+    <a href="tel:0648360737" class="nav-phone">06 48360737</a>
 
-  <button class="nav-burger" aria-label="Menu openen" onclick="openMob()">
-    <span></span><span></span><span></span>
-  </button>
-</nav>
+    <button class="nav-burger" aria-label="Menu openen" onclick="openMob()">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
 
-<div class="mob-menu" id="mobMenu" role="dialog" aria-modal="true">
-  <button class="mob-close" aria-label="Sluiten" onclick="closeMob()">&times;</button>
-  <a href="#diensten" onclick="closeMob()">Diensten</a>
-  <a href="#portfolio" onclick="closeMob()">Portfolio</a>
-  <a href="#michel"   onclick="closeMob()">Wie is Michel</a>
-  <a href="#bel"      onclick="closeMob()">Bel mij</a>
-  <a href="tel:0648360737" class="mob-tel" onclick="closeMob()">06 48360737</a>
-</div>
+  <div class="mob-menu" id="mobMenu" role="dialog" aria-modal="true">
+    <button class="mob-close" aria-label="Sluiten" onclick="closeMob()">&times;</button>
+    <a href="#diensten" onclick="closeMob()">Diensten</a>
+    <a href="#portfolio" onclick="closeMob()">Portfolio</a>
+    <a href="#michel" onclick="closeMob()">Wie is Michel</a>
+    <a href="#bel" onclick="closeMob()">Bel mij</a>
+    <a href="tel:0648360737" class="mob-tel" onclick="closeMob()">06 48360737</a>
+  </div>
 
 
-<!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      HERO — full-bleed foto, tekst rechts
 ═══════════════════════════════════════════ -->
-<section id="hero" aria-label="Introductie">
+  <section id="hero" aria-label="Introductie">
 
-  <div class="hero-bg" aria-hidden="true">
-    <img src="fotos/badkamer 1.jpg" alt="" loading="eager">
-  </div>
-
-  <div class="hero-content">
-    <div class="hero-text">
-      <h1 class="hero-h1 h-a1">
-        Stucwerk dat<br>
-        <em>onthouden wordt.</em>
-      </h1>
-      <p class="hero-p h-a2">
-        Van badkamer tot woonkamer — strak afgewerkt, netjes uitgevoerd en met oog voor wat echt telt.
-      </p>
-      <a href="#portfolio" class="btn btn-gold h-a3">Zie het werk</a>
+    <div class="hero-bg" aria-hidden="true">
+      <img src="fotos/badkamer 1.jpg" alt="" loading="eager">
     </div>
-  </div>
 
-</section>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-h1 h-a1">
+          Stucwerk dat<br>
+          <em>onthouden wordt.</em>
+        </h1>
+        <p class="hero-p h-a2">
+          Van badkamer tot woonkamer — strak afgewerkt, netjes uitgevoerd en met oog voor wat echt telt.
+        </p>
+        <a href="#portfolio" class="btn btn-gold h-a3">Zie het werk</a>
+      </div>
+    </div>
+
+  </section>
 
 
-<!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      PORTFOLIO — 3 kolommen, hover groter
 ═══════════════════════════════════════════ -->
-<section id="portfolio" aria-label="Portfolio">
+  <section id="portfolio" aria-label="Portfolio">
 
-  <div class="port-top sr">
-    <div>
-      <span class="s-label">Uitgevoerde projecten</span>
-      <h2 class="s-heading">Portfolio</h2>
-    </div>
-    <a
-      href="https://www.facebook.com/stukadoorsbedrijfmichelstevens/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="btn btn-ghost"
-    >Meer foto's op Facebook</a>
-  </div>
-
-  <div class="port-grid" style="max-width:1280px;margin:0 auto;">
-
-    <div class="port-item sr">
-      <img
-        src="fotos/badkamer 1.jpg"
-        alt="Stucwerk luxe badkamer"
-        loading="lazy"
-      >
+    <div class="port-top sr">
+      <div>
+        <span class="s-label">Uitgevoerde projecten</span>
+        <h2 class="s-heading">Portfolio</h2>
+      </div>
+      <a href="https://www.facebook.com/stukadoorsbedrijfmichelstevens/" target="_blank" rel="noopener noreferrer"
+        class="btn btn-ghost">Meer foto's op Facebook</a>
     </div>
 
-    <div class="port-item sr d1">
-      <img
-        src="fotos/hoek 1.jpg"
-        alt="Stucafwerking douche en wanden"
-        loading="lazy"
-      >
+    <div class="port-grid" style="max-width:1280px;margin:0 auto;">
+
+      <div class="port-item sr">
+        <img src="fotos/badkamer 1.jpg" alt="Stucwerk luxe badkamer" loading="lazy">
+      </div>
+
+      <div class="port-item sr d1">
+        <img src="fotos/hoek 1.jpg" alt="Stucafwerking douche en wanden" loading="lazy">
+      </div>
+
+      <div class="port-item sr d2">
+        <img src="fotos/keuken 1.jpg" alt="Stucwerk moderne keuken" loading="lazy">
+      </div>
+
     </div>
 
-    <div class="port-item sr d2">
-      <img
-        src="fotos/keuken 1.jpg"
-        alt="Stucwerk moderne keuken"
-        loading="lazy"
-      >
-    </div>
-
-  </div>
-
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      DIENSTEN
 ═══════════════════════════════════════════ -->
-<section id="diensten" aria-label="Diensten">
-  <div class="diensten-inner">
+  <section id="diensten" aria-label="Diensten">
+    <div class="diensten-inner">
 
-    <h2 class="diensten-h sr">Diensten</h2>
+      <h2 class="diensten-h sr">Diensten</h2>
 
-    <div class="dienst-item sr">
-      <div class="dienst-main">
-        <div class="dienst-name">Stucwerk</div>
-        <div class="dienst-sub">Wanden &amp; Plafonds</div>
+      <div class="dienst-item sr">
+        <div class="dienst-main">
+          <div class="dienst-name">Stucwerk</div>
+          <div class="dienst-sub">Wanden &amp; Plafonds</div>
+        </div>
+        <p class="dienst-desc">
+          Wanden en plafonds glad afgewerkt, zonder strepen of oneffenheden. Geschikt voor nieuwbouw en renovatie. Snel,
+          schoon en duurzaam.
+        </p>
       </div>
-      <p class="dienst-desc">
-        Wanden en plafonds glad afgewerkt, zonder strepen of oneffenheden. Geschikt voor nieuwbouw en renovatie — snel, schoon en duurzaam.
-      </p>
-    </div>
 
-    <div class="dienst-item sr d1">
-      <div class="dienst-main">
-        <div class="dienst-name">Designafwerking</div>
-        <div class="dienst-sub">Venetiaans &amp; Spachtelputz</div>
+      <div class="dienst-item sr d1">
+        <div class="dienst-main">
+          <div class="dienst-name">Designafwerking</div>
+          <div class="dienst-sub">Venetiaans &amp; Spachtelputz</div>
+        </div>
+        <p class="dienst-desc">
+          Venetiaans stucwerk, spachtelputz of old gold. Bijzondere technieken die een ruimte karakter geven en
+          tientallen jaren meegaan.
+        </p>
       </div>
-      <p class="dienst-desc">
-        Venetiaans stucwerk, spachtelputz of old gold. Bijzondere technieken die een ruimte karakter geven en tientallen jaren meegaan.
-      </p>
-    </div>
 
-    <div class="dienst-item sr d2">
-      <div class="dienst-main">
-        <div class="dienst-name">Badkamer &amp; Keuken</div>
-        <div class="dienst-sub">Waterdicht &amp; Op maat</div>
+      <div class="dienst-item sr d2">
+        <div class="dienst-main">
+          <div class="dienst-name">Badkamer &amp; Keuken</div>
+          <div class="dienst-sub">Waterdicht &amp; Op maat</div>
+        </div>
+        <p class="dienst-desc">
+          Waterdicht stucwerk voor vochtige ruimtes. Betonlook, kalkstucco of microcement,stijlvol, onderhoudsarm en
+          volledig op maat.
+        </p>
       </div>
-      <p class="dienst-desc">
-        Waterdicht stucwerk voor vochtige ruimtes. Betonlook, kalkstucco of microcement — stijlvol, onderhoudsarm en volledig op maat.
-      </p>
+
     </div>
-
-  </div>
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      QUOTE
 ═══════════════════════════════════════════ -->
-<section id="quote" aria-label="Klantuitspraak">
-  <div class="quote-inner sr">
-    <div class="quote-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-    <p class="quote-text">
-      Vakmanschap en oog voor detail. Het resultaat is strak, modern en geeft de ruimte een unieke uitstraling.
-    </p>
-    <div class="quote-from">Marilene Hoeve &nbsp;&middot;&nbsp; Google Review</div>
-  </div>
-</section>
+  <section id="quote" aria-label="Klantuitspraak">
+    <div class="quote-inner sr">
+      <div class="quote-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+      <p class="quote-text">
+        Vakmanschap en oog voor detail. Het resultaat is strak, modern en geeft de ruimte een unieke uitstraling.
+      </p>
+      <div class="quote-from">Marilene Hoeve &nbsp;&middot;&nbsp; Google Review</div>
+    </div>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      BEOORDELINGEN
 ═══════════════════════════════════════════ -->
-<section id="beoordelingen" aria-label="Beoordelingen">
-  <div class="b-inner">
+  <section id="beoordelingen" aria-label="Beoordelingen">
+    <div class="b-inner">
 
-    <div class="b-score sr">
-      <div class="b-num" aria-label="Beoordeling 5,0">5,0</div>
-      <div class="b-meta">
-        <div class="b-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <div class="b-count">61 Google reviews</div>
+      <div class="b-score sr">
+        <div class="b-num" aria-label="Beoordeling 5,0">5,0</div>
+        <div class="b-meta">
+          <div class="b-stars" aria-hidden="true">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <div class="b-count">61 Google reviews</div>
+        </div>
+        <div class="b-divider" aria-hidden="true"></div>
+        <div class="b-label">Wat klanten zeggen</div>
       </div>
-      <div class="b-divider" aria-hidden="true"></div>
-      <div class="b-label">Wat klanten zeggen</div>
+
+      <div class="b-grid">
+        <article class="b-item sr">
+          <p class="b-q-text">Michel heeft bij ons de gehele hal, trapopgang en woonkamer compleet gestuukt. Een echte
+            vakman met een kritisch oog voor detail.</p>
+          <div class="b-author">Mellanie Smit</div>
+        </article>
+        <article class="b-item sr d1">
+          <p class="b-q-text">Michel is bij ons geweest voor de keuken. Goede service, veel keuze en een eerlijk advies.
+            Super tevreden met het resultaat.</p>
+          <div class="b-author">Henriette Muskee</div>
+        </article>
+        <article class="b-item sr d2">
+          <p class="b-q-text">Met geluk qua tijd die hij had, de keukenmuren en woonkamer compleet gestuct. Netjes en
+            vakkundig afgewerkt.</p>
+          <div class="b-author">Google Review</div>
+        </article>
+      </div>
+
     </div>
-
-    <div class="b-grid">
-      <article class="b-item sr">
-        <p class="b-q-text">Michel heeft bij ons de gehele hal, trapopgang en woonkamer compleet gestuukt. Een echte vakman met een kritisch oog voor detail.</p>
-        <div class="b-author">Mellanie Smit</div>
-      </article>
-      <article class="b-item sr d1">
-        <p class="b-q-text">Michel is bij ons geweest voor de keuken. Goede service, veel keuze en een eerlijk advies. Super tevreden met het resultaat.</p>
-        <div class="b-author">Henriette Muskee</div>
-      </article>
-      <article class="b-item sr d2">
-        <p class="b-q-text">Met geluk qua tijd die hij had, de keukenmuren en woonkamer compleet gestuct. Netjes en vakkundig afgewerkt.</p>
-        <div class="b-author">Google Review</div>
-      </article>
-    </div>
-
-  </div>
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      WIE IS MICHEL
 ═══════════════════════════════════════════ -->
-<section id="michel" aria-label="Over Michel Stevens">
-  <div class="michel-inner">
-    <div class="michel-photo sr">
-      <img
-        src="fotos/michel foto.jpg"
-        alt="Michel Stevens, stukadoor en eigenaar"
-        loading="lazy"
-      >
-    </div>
-    <div class="michel-content">
-      <h2 class="michel-h sr">Wie is Michel?</h2>
-      <p class="michel-p sr d1">
-        Stucadoor uit Veendam met een duidelijke voorkeur voor netjes werken en eerlijk advies geven. Geen verborgen kosten, geen half werk.
-      </p>
-      <p class="michel-p sr d1">
-        Elk project is anders — daarom denk ik van tevoren mee over materiaal, techniek en het eindresultaat. Wat ik maak moet er over tien jaar nog goed uitzien.
-      </p>
-      <div class="michel-stats sr d2">
-        <div class="michel-stat">
-          <div class="michel-stat-n">5,0</div>
-          <div class="michel-stat-l">Google beoordeling</div>
-        </div>
-        <div class="michel-stat">
-          <div class="michel-stat-n">61</div>
-          <div class="michel-stat-l">Tevreden klanten</div>
+  <section id="michel" aria-label="Over Michel Stevens">
+    <div class="michel-inner">
+      <div class="michel-photo sr">
+        <img src="fotos/michel foto.jpg" alt="Michel Stevens, stukadoor en eigenaar" loading="lazy">
+      </div>
+      <div class="michel-content">
+        <h2 class="michel-h sr">Wie is Michel?</h2>
+        <p class="michel-p sr d1">
+          Stucadoor uit Veendam met een duidelijke voorkeur voor netjes werken en eerlijk advies geven. Geen verborgen
+          kosten, geen half werk.
+        </p>
+        <p class="michel-p sr d1">
+          Elk project is anders daarom denk ik van tevoren mee over materiaal, techniek en het eindresultaat. Wat ik
+          maak moet er over tien jaar nog goed uitzien.
+        </p>
+        <div class="michel-stats sr d2">
+          <div class="michel-stat">
+            <div class="michel-stat-n">5,0</div>
+            <div class="michel-stat-l">Google beoordeling</div>
+          </div>
+          <div class="michel-stat">
+            <div class="michel-stat-n">61</div>
+            <div class="michel-stat-l">Tevreden klanten</div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      BEL MICHEL
 ═══════════════════════════════════════════ -->
-<section id="bel" aria-label="Contact">
-  <div class="bel-inner">
-    <div class="bel-l sr">
-      <h2 class="bel-h">
-        Klaar voor een<br><span>nieuw project?</span>
-      </h2>
-      <p class="bel-p">
-        Een vrijblijvend gesprek is altijd mogelijk. Vertel wat u in gedachten heeft en Michel kijkt mee.
-      </p>
-      <a
-        href="https://www.facebook.com/stukadoorsbedrijfmichelstevens/"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="btn btn-ghost"
-        style="align-self:flex-start;"
-      >Facebook</a>
-    </div>
-    <div class="bel-r sr d1">
-      <div class="bel-sublabel">Direct bereikbaar</div>
-      <a href="tel:0648360737" class="bel-phone" id="belPhone" aria-label="Bel 06 48360737">
-        <span class="pc">0</span><span class="pc">6</span><span class="pc">&nbsp;</span><span
-        class="pc">4</span><span class="pc">8</span><span class="pc">3</span><span
-        class="pc">6</span><span class="pc">0</span><span class="pc">7</span><span
-        class="pc">3</span><span class="pc">7</span>
-      </a>
-      <div class="bel-btns">
-        <a href="tel:0648360737" class="btn btn-gold">Bel Michel</a>
+  <section id="bel" aria-label="Contact">
+    <div class="bel-inner">
+      <div class="bel-l sr">
+        <h2 class="bel-h">
+          Klaar voor een<br><span>nieuw project?</span>
+        </h2>
+        <p class="bel-p">
+          Een vrijblijvend gesprek is altijd mogelijk. Vertel wat u in gedachten heeft en Michel kijkt mee.
+        </p>
+        <a href="https://www.facebook.com/stukadoorsbedrijfmichelstevens/" target="_blank" rel="noopener noreferrer"
+          class="btn btn-ghost" style="align-self:flex-start;">Facebook</a>
+      </div>
+      <div class="bel-r sr d1">
+        <div class="bel-sublabel">Direct bereikbaar</div>
+        <a href="tel:0648360737" class="bel-phone" id="belPhone" aria-label="Bel 06 48360737">
+          <span class="pc">0</span><span class="pc">6</span><span class="pc">&nbsp;</span><span class="pc">4</span><span
+            class="pc">8</span><span class="pc">3</span><span class="pc">6</span><span class="pc">0</span><span
+            class="pc">7</span><span class="pc">3</span><span class="pc">7</span>
+        </a>
+        <div class="bel-btns">
+          <a href="tel:0648360737" class="btn btn-gold">Bel Michel</a>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
 
-<!-- ═══════════════════════════════════════════
+  <!-- ═══════════════════════════════════════════
      FOOTER
 ═══════════════════════════════════════════ -->
-<footer>
-  <div class="ft-brand">Michel Stevens Stuc &amp; Design</div>
-  <div class="ft-copy">&copy; 2024</div>
-</footer>
+  <footer>
+    <div class="ft-brand">Michel Stevens Stuc &amp; Design</div>
+    <div class="ft-copy">&copy; 2024</div>
+  </footer>
 
 
-<script>
-  function openMob()  { document.getElementById('mobMenu').classList.add('open'); document.body.style.overflow='hidden'; }
-  function closeMob() { document.getElementById('mobMenu').classList.remove('open'); document.body.style.overflow=''; }
+  <script>
+    function openMob() { document.getElementById('mobMenu').classList.add('open'); document.body.style.overflow = 'hidden'; }
+    function closeMob() { document.getElementById('mobMenu').classList.remove('open'); document.body.style.overflow = ''; }
 
-  /* NAV glass heavy on scroll */
-  (function() {
-    const nav = document.getElementById('nav');
-    const sentinel = document.createElement('div');
-    sentinel.style.cssText = 'position:absolute;top:85vh;height:1px;pointer-events:none;';
-    document.body.prepend(sentinel);
-    new IntersectionObserver(entries => {
-      nav.classList.toggle('heavy', !entries[0].isIntersecting);
-    }, { threshold: 0 }).observe(sentinel);
-  })();
+    /* NAV glass heavy on scroll */
+    (function () {
+      const nav = document.getElementById('nav');
+      const sentinel = document.createElement('div');
+      sentinel.style.cssText = 'position:absolute;top:85vh;height:1px;pointer-events:none;';
+      document.body.prepend(sentinel);
+      new IntersectionObserver(entries => {
+        nav.classList.toggle('heavy', !entries[0].isIntersecting);
+      }, { threshold: 0 }).observe(sentinel);
+    })();
 
-  /* SCROLL REVEAL */
-  (function() {
-    const io = new IntersectionObserver(
-      entries => entries.forEach(e => {
-        if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
-      }),
-      { threshold: 0.06 }
-    );
-    document.querySelectorAll('.sr').forEach(el => io.observe(el));
-  })();
+    /* SCROLL REVEAL */
+    (function () {
+      const io = new IntersectionObserver(
+        entries => entries.forEach(e => {
+          if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+        }),
+        { threshold: 0.06 }
+      );
+      document.querySelectorAll('.sr').forEach(el => io.observe(el));
+    })();
 
-  /* PHONE STAGGER */
-  (function() {
-    const phone = document.getElementById('belPhone');
-    if (!phone) return;
-    new IntersectionObserver(entries => {
-      if (entries[0].isIntersecting) { phone.classList.add('lit'); }
-    }, { threshold: 0.4 }).observe(phone);
-  })();
-</script>
+    /* PHONE STAGGER */
+    (function () {
+      const phone = document.getElementById('belPhone');
+      if (!phone) return;
+      new IntersectionObserver(entries => {
+        if (entries[0].isIntersecting) { phone.classList.add('lit'); }
+      }, { threshold: 0.4 }).observe(phone);
+    })();
+  </script>
 
 </body>
+
 </html>
